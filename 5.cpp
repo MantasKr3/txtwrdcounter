@@ -26,7 +26,7 @@ output.close();
     std::multiset<std::string> list = 
         std::multiset<std::string>( std::istream_iterator<std::string>(input),
                                     std::istream_iterator<std::string>()); // iteruojam teksta po zodi multiset konteineryje
-
+input.close();
 std::ofstream outputas("rezultatai.txt");
 
  for(auto zodis = list.begin(); zodis != list.end(); zodis=list.upper_bound(*zodis)) //panaudojam multiset funkcijas
