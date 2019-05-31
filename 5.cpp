@@ -13,7 +13,7 @@ int main()
 std::ifstream t("Text.txt");
 
 std::string str((std::istreambuf_iterator<char>(t)),
-                 std::istreambuf_iterator<char>()); // teksta imam kaip viena strig'a
+                 std::istreambuf_iterator<char>()); // teksta imam kaip viena string'a
 str.resize(remove_if(str.begin(), str.end(),[](char x){return !isalnum(x) && !isspace(x);})-str.begin()); // removinam simbolius
 t.close();
 std::ofstream output("Text.txt");// isvedam teksta be simboliu
