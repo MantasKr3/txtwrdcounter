@@ -50,20 +50,20 @@ http://delfi.lv
 ## [v1.0](https://github.com/MantasKr3/txtwrdcounter/releases/tag/v1.0)
 
 ## Programos paruošimas naudojimui naudojant `g++` kompiliatorių
-### Visas 3 užduoties dalis
+### Visas 3 užduoties dalys
 - `git clone https://github.com/MantasKr3/txtwrdcounter`
 - `cd txtwrdcounter`
 - `g++ 5-123.cpp -o test`
 - `./test`
 
-### 1 ir 2  5 užduoties dalis
+### 1 ir 2  5 užduoties dalys
 
 - `git clone https://github.com/MantasKr3/txtwrdcounter`
 - `cd txtwrdcounter`
 - `g++ 5-12.cpp -o test`
 - `./test`
 
-### 3 5 užduoties dalį
+### 3 5 užduoties dalis
 
 - `git clone https://github.com/MantasKr3/txtwrdcounter`
 - `cd txtwrdcounter`
