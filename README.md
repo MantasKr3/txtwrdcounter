@@ -47,8 +47,10 @@ www.google.jp
 http://delfi.lv
 
 ```
+## [v1.0](https://github.com/MantasKr3/txtwrdcounter/releases/tag/v1.0)
+
 ## Programos paruošimas naudojimui naudojant `g++` kompiliatorių
-### Visas 3 š užduoties dalis
+### Visas 3 užduoties dalis
 - `git clone https://github.com/MantasKr3/txtwrdcounter`
 - `cd txtwrdcounter`
 - `g++ 5-123.cpp -o test`
@@ -61,12 +63,11 @@ http://delfi.lv
 - `g++ 5-12.cpp -o test`
 - `./test`
 
-### 3  5 užduoties dalį
+### 3 5 užduoties dalį
 
 - `git clone https://github.com/MantasKr3/txtwrdcounter`
 - `cd txtwrdcounter`
 - `g++ 5-3.cpp -o test`
 - `./test`
 
-## [v1.0](https://github.com/MantasKr3/txtwrdcounter/releases/tag/v1.0)
 
