@@ -1,8 +1,8 @@
 # Word counter
 
-Pirma Reikia sukurti failą Text.txt ir jame patalpinti tekstą <br/>
-Gauti rezultatai bus išvesti į rezultatai.txt failą<br/>
-Rasti url adresai tekste bus išvesti į url.txt failą<br/>
+Pirma Reikia sukurti failą Text.txt ir jame patalpinti tekstą. <br/>
+Rezultatai bus išvesti į rezultatai.txt failą<br/>
+Url adresai tekste bus išvesti į url.txt failą<br/>
 
 ## Programos išvedimas
 Result.txt failas atrodo taip:
@@ -49,21 +49,21 @@ http://delfi.lv
 ```
 ## Programos paruošimas naudojimui naudojant `g++` kompiliatorių
 ### Visas 3 š užduoties dalis
-- `git clone https://github.com/MantasKr3/txtwrdcounter
+- `git clone https://github.com/MantasKr3/txtwrdcounter`
 - `cd txtwrdcounter`
 - `g++ 5-123.cpp -o test`
 - `./test`
 
 ### 1 ir 2  5 užduoties dalis
 
-- `git clone https://github.com/MantasKr3/txtwrdcounter
+- `git clone https://github.com/MantasKr3/txtwrdcounter`
 - `cd txtwrdcounter`
 - `g++ 5-12.cpp -o test`
 - `./test`
 
 ### 3  5 užduoties dalį
 
-- `git clone https://github.com/MantasKr3/txtwrdcounter
+- `git clone https://github.com/MantasKr3/txtwrdcounter`
 - `cd txtwrdcounter`
 - `g++ 5-3.cpp -o test`
 - `./test`
