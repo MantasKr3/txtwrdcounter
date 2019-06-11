@@ -6,30 +6,12 @@
 #include <locale>
 #include <regex>
 #include <streambuf>
-
+#include <vector>
+#include <sstream>
+#include <algorithm>
 
 int main()
 {
-
-    std::ifstream inputas("Text.txt");
-std::ofstream out("url.txt");
-
-    std::multiset<std::string> list = 
-        std::multiset<std::string>( std::istream_iterator<std::string>(inputas),
-                                    std::istream_iterator<std::string>()); // iteruojam teksta po zodi multiset konteineryje
-
-inputas.close();
-out<<"URL ADRESAI:"<<std::endl;
- for(auto zodis = list.begin(); zodis != list.end(); zodis=list.upper_bound(*zodis)) //panaudojam multiset funkcijas
-{
-    std::string word=*zodis;
- if(word.rfind("www.",0)==0||word.rfind("http://",0)==0||word.rfind("https://",0)==0||word.rfind("ftp://",0)==0||word.rfind("localhost:",0)==0)
-    {
-     out << *zodis << " : " << list.count(*zodis) << std::endl; //naujdoam multiset integruota count()
-    }
-}    
-out.close();
-
 std::ofstream outputas("rezultatai.txt",std::ios::app);
 std::ifstream t("Text.txt");
 
@@ -42,19 +24,16 @@ output<<str;
 output.close();
  std::ifstream input("Text.txt");
 
-
-
-
-
-
-    std::multiset<std::string> listas = 
+std::multiset<std::string> listas = 
         std::multiset<std::string>( std::istream_iterator<std::string>(input),
                                     std::istream_iterator<std::string>());
 input.close();
 outputas<<"Pasikartojantys zodziai:"<<std::endl;
-
-
- for(auto zodis = listas.begin(); zodis != listas.end(); zodis=listas.upper_bound(*zodis)) 
+  // std::set<std::string> my_set(listas.begin(), listas.end());
+  //   std::vector<std::string> my_vec(my_set.begin(), my_set.end());
+  //   std::sort(my_vec.begin(), my_vec.end());
+  //   listas= std::multiset<std::string>(my_vec.begin(),my_vec.end());
+for(auto zodis = listas.begin(); zodis != listas.end(); zodis=listas.upper_bound(*zodis)) 
 {
   std::ifstream in("Text.txt");
 
@@ -63,28 +42,46 @@ std::string eilute;
 std::string word;
 std::vector<int> line;
 int eile = 1;
+int kartai=eile;
 in.clear();  
  while (std::getline(in, eilute))
     {
+        kartai=eile;
         std::stringstream abc(eilute);
         while (!abc.eof())
         {
           abc>>word;
-          if(word==*zodis)
+          
+         if(kartai>eile)
           {
-            line.push_back(eile);
+              break;
           }
-
+           if (word==*zodis)
+          {
+             kartai++;
+             line.push_back(eile);
+          }
+        
+         
         }
         eile++;
 
     }
 
+outputas<<std::endl;
+outputas << *zodis << "  pasikartoja (kartai) : " << listas.count(*zodis) << "  ir jis pasikartoja yra siose teksto eilutese: ";
+outputas<<std::endl;
 
-  outputas << *zodis << "  pasikartoja (kartai) : " << listas.count(*zodis) << "  ir jis pasikartoja yra siose teksto eilutese: ";
-      for(size_t i=0;i<line.size();i++)
+
+auto mid =line.size() / 2; 
+if(mid>=3)
 {
-  outputas<<line[i]<<" ";
+    mid++;
+}
+for(size_t i=0;i<=mid;i++)
+{  
+outputas<<line[i]<<"  "<<line[i+1]<<std::endl;
+i++;
 }
   outputas<<std::endl;
   }
